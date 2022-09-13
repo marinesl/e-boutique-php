@@ -1,17 +1,23 @@
 <center>
 	<h1>Accueil</h1>
-	<br>
 	<p>Bienvenue sur le magasin en ligne <b>Shop Converse</b>.</p>
-	<p>Voulez-vous vous <a href="index.php?ctrl=User&action=login">Connecter</a> ou <a href='index.php?ctrl=User&action=create'>Créer un compte</a>.</p>
+
+	<?php 
+		if(!isset($_SESSION["user"])) {
+	?> 
+		<p>Voulez-vous vous <a href="index.php?ctrl=User&action=login">Connecter</a> ou <a href='index.php?ctrl=User&action=create'>Créer un compte</a>.</p>
+	<?php
+		}
+	?>
+
 	<h3><b>Les nouveautés</b></h3>
-	<br>
 </center>
 
 
 
 <?php
-	if($result_newProduct !== 0) {
-		for($i = 0 ; $i < count($result_newProduct) ; $i++) {
+	if ($result_newProduct !== 0) {
+		for ($i = 0 ; $i < count($result_newProduct) ; $i++) {
 ?>
 			<div class="panel panel-default">
 				<div class="panel-heading">
@@ -38,7 +44,7 @@
 								if(isset($_SESSION["user"])) {
 							?> 
 								<br><br><br>
-								<a class="btn btn-default" href="javascript:if(confirm('Etes-vous sûr(e) de vouloir ajouter <?php echo utf8_encode($result_newProduct[$i]["name_product"]); ?> à votre panier ?'))document.location.href='index.php?ctrl=Product&action=doOrder&id=<?php echo $result_newProduct[$i]["id_product"]; ?>'"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Ajouter au panier</a>
+								<a class="btn btn-primary" href="javascript:if(confirm('Etes-vous sûr(e) de vouloir ajouter <?php echo utf8_encode($result_newProduct[$i]["name_product"]); ?> à votre panier ?'))document.location.href='index.php?ctrl=Product&action=doOrder&id=<?php echo $result_newProduct[$i]["id_product"]; ?>'"><i class="fa-solid fa-cart-shopping"></i> Ajouter au panier</a>
 							<?php
 								}
 								else {

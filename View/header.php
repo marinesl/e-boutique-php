@@ -3,7 +3,6 @@
 	<div class="row">
 		<nav class="navbar navbar-default">
 			<div class="row">
-				<br>
 				<div class="navbar-header">
 					<p class="navbar-brand">
 						<div class="col-lg-2">
@@ -17,7 +16,7 @@
 			</div>
 			
 			<ul class="nav navbar-nav">
-				<li><a href="index.php?ctrl=Product&action=home">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Accueil</a></li>
+				<li><a href="index.php?ctrl=Product&action=home">Accueil</a></li>
 				<li><a href="index.php?ctrl=Product&action=newProduct">Nouveautés</a></li>
 				<li><a href="index.php?ctrl=Product&action=contact">Contactez-nous</a></li>
 				<?php 

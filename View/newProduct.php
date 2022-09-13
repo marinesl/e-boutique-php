@@ -32,7 +32,7 @@
 								if(isset($_SESSION["user"])) {
 							?> 
 								<br><br><br>
-								<a class="btn btn-default" href="javascript:if(confirm('Etes-vous sûr(e) de vouloir ajouter <?php echo utf8_encode($result_newProduct[$i]["name_product"]); ?> à votre panier ?'))document.location.href='index.php?ctrl=Product&action=doOrder&id=<?php echo $result_newProduct[$i]["id_product"]; ?>'"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Ajouter au panier</a>
+								<a class="btn btn-primary" href="javascript:if(confirm('Etes-vous sûr(e) de vouloir ajouter <?php echo utf8_encode($result_newProduct[$i]["name_product"]); ?> à votre panier ?'))document.location.href='index.php?ctrl=Product&action=doOrder&id=<?php echo $result_newProduct[$i]["id_product"]; ?>'"><i class="fa-solid fa-cart-shopping"></i> Ajouter au panier</a>
 							<?php
 								}
 								else {

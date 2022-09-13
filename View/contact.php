@@ -25,7 +25,7 @@
 				<br>
 				<div class="row">
 					<div class="col-lg-push-6 col-lg-1">
-						<button class="btn btn-default" name="send">Envoyer</button>
+						<button class="btn btn-primary" name="send">Envoyer</button>
 					</div>
 				</div>
 			</div>

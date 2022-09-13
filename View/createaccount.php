@@ -70,7 +70,7 @@
 			<br>
 			<div class="row">
 				<div class="col-lg-push-6 col-lg-1">
-					<button class="btn btn-default" name="create">Créer</button>
+					<button class="btn btn-primary" name="create">Créer</button>
 				</div>
 			</div>
 		</div>

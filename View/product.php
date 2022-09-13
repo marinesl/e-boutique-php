@@ -10,8 +10,6 @@
 		<img alt="image" src="Model/images/<?php echo $result_productById[0]["image_product"]; ?>">
 	</div>
 	
-	<br><br>
-	
 	<div class="row">
 		<ul class="list-unstyled">
 			<li>Description : <?php echo utf8_encode($result_productById[0]["description_product"]); ?></li>
@@ -24,7 +22,7 @@
 				if(isset($_SESSION["user"])) {
 			?> 
 				<br>
-				<a class="btn btn-default" href="javascript:if(confirm('Etes-vous sûr(e) de vouloir ajouter <?php echo utf8_encode($result_productById[0]["name_product"]); ?> à votre panier ?'))document.location.href='index.php?ctrl=Product&action=doOrder&id=<?php echo $result_productById[0]["id_product"]; ?>'"><span class="glyphicon glyphicon-shopping-cart"></span>&nbsp;&nbsp;Ajouter au panier</a>
+				<a class="btn btn-primary" href="javascript:if(confirm('Etes-vous sûr(e) de vouloir ajouter <?php echo utf8_encode($result_productById[0]["name_product"]); ?> à votre panier ?'))document.location.href='index.php?ctrl=Product&action=doOrder&id=<?php echo $result_productById[0]["id_product"]; ?>'"><i class="fa-solid fa-cart-shopping"></i> Ajouter au panier</a>
 			<?php
 				}
 				else {

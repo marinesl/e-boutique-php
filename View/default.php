@@ -1,12 +1,18 @@
-<!DOCTYPE>
-
-<html>
+<html lang="fr">
 
 <head>
-	<meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
 	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<title>E-boutique PHP</title>
+
+	<!-- BOOTSTRAP -->
 	<link rel="stylesheet" href="View/bootstrap/css/bootstrap.min.css">
-	<title>E-boutique</title>
+
+	<!-- FONTAWESOME -->
+	<link href="View/fontawesome/css/fontawesome.css" rel="stylesheet">
+	<link href="View/fontawesome/css/brands.css" rel="stylesheet">
+	<link href="View/fontawesome/css/solid.css" rel="stylesheet">
 </head>
 
 <body>
@@ -21,7 +27,7 @@
 				</div>
 				<div class="col-lg-9">
 					<?php
-						if(isset($page))
+						if (isset($page))
 							require("./View/".$page.".php");
 					?>
 				</div>
@@ -31,6 +37,9 @@
 		<?php require("footer.php"); ?>
 		
 	</div>
+
+	<script src="View/bootstrap/js/jquery-3.6.1.min.js"></script>
+	<script src="View/bootstrap/js/bootstrap.min.js"></script>
 	
 </body>
 

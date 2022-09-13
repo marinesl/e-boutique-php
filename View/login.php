@@ -48,7 +48,7 @@
 				<br>
 				<div class="row">
 					<div class="col-lg-push-6 col-lg-1">
-						<button class="btn btn-default" name="login">Connexion</button>
+						<button class="btn btn-primary" name="login">Connexion</button>
 					</div>
 				</div>
 			</div>

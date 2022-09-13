@@ -1,26 +1,37 @@
 <?php
 
+require __DIR__.'/../.env.php';
+
 	class Connection {
 		
 		private $host;
 		private $dbname;
 		private $username;
 		private $password;
+		private $port;
 
 		public function __construct() {
-		// les identifiants de connexion sont stockées ici comme attributs de la classe connection
-			$this->host = "localhost";
-			$this->dbname = "e_boutique";
-			$this->username = "root";
-			$this->password = "";
+			$this->host = BDD_HOST;
+			$this->dbname = BDD_NAME;
+			$this->username = BDD_USER;
+			$this->password = BDD_PASSWORD;
+			$this->port = BDD_PORT;
 		}
 		
-		public function get_connection() {
-		// cette fonction établie une connexion à la BDD à l'aide de l'objet PDO
+		// cette mÃ©thode Ã©tablie une connexion Ã  la BDD Ã  l'aide de l'objet PDO
 		// elle retourne l'identifant de la connexion (pointeur)
-			return $db = new PDO('mysql:host='.$this->host.';dbname='.$this->dbname,$this->username,$this->password);
-		}
+		public function get_connection() {
+			$dsn = "mysql:$this->host;port=$this->port;dbname=$this->dbname";
 
+			try {
+				$dbh = new PDO($dsn, $this->username, $this->password);
+				$dbh->exec("set character set utf8");
+			} catch (PDOException $e) {
+				die("Erreur! :" . $e->getMessage());
+			}
+
+			return $dbh;
+		}
 	}
 	
 ?>

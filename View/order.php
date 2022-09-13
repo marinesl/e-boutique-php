@@ -32,10 +32,10 @@
 						<td><?php echo $result_orderlines[$i]["price_product"]; ?>€</td>
 						<form class="form-horizontal" action="index.php?ctrl=Product&action=refresh&id=<?php echo $result_orderlines[$i]["id_product"]; ?>" method="post">
 							<td><input type="number" name="quantity" value="<?php echo $result_orderlines[$i]["quantity_order"]; ?>"></td>
-							<td width="10%"><button type="submit"><span class="glyphicon glyphicon-ok"></span></button></td>
+							<td width="10%"><button type="submit"><i class="fa-solid fa-check"></i></button></td>
 						</form>						
 						<td width=""><center><?php echo $result_orderlines[$i]["total_order"]; ?>€</center></td>
-						<td><a href="javascript:if(confirm('Etes-vous sûr(e) de vouloir supprimer <?php echo utf8_encode($result_orderlines[$i]["name_product"]); ?> de votre panier ?'))document.location.href='index.php?ctrl=Product&action=deleteOrder&id=<?php echo $result_orderlines[$i]["id_order"]; ?>'"><span class="glyphicon glyphicon-remove"></span></a></td>
+						<td><a href="javascript:if(confirm('Etes-vous sûr(e) de vouloir supprimer <?php echo utf8_encode($result_orderlines[$i]["name_product"]); ?> de votre panier ?'))document.location.href='index.php?ctrl=Product&action=deleteOrder&id=<?php echo $result_orderlines[$i]["id_order"]; ?>'"><i class="fa-solid fa-trash"></i></a></td>
 					</tr>
 				<?php 
 					} 
@@ -54,7 +54,7 @@
 	</div>
 	<div class="row">
 		<div class="col-lg-push-9 col-lg-2">
-			<a class="btn btn-default" href="javascript:if(confirm('Voulez-vous confirmer votre commande ?'))document.location.href='index.php?ctrl=Product&action=order'">Confirmer la commande</a>
+			<a class="btn btn-primary" href="javascript:if(confirm('Voulez-vous confirmer votre commande ?'))document.location.href='index.php?ctrl=Product&action=order'">Confirmer la commande</a>
 		</div>
 	</div>
 	<br>
