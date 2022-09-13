@@ -38,7 +38,7 @@
 		 * Affichage de la page des produits de la catégorie Ballerine
 		 */
 		public function Ballerine() {
-			$page = "Ballerine";
+			$page = "ballerine";
 			$result_productByCategory = $this->product->productByCategory("Ballerine");
 			require ("View/default.php");
 		}
@@ -48,7 +48,7 @@
 		 * Affichage de la page des produits de la catégorie Basse
 		 */
 		public function Basse() {
-			$page = "Basse";
+			$page = "basse";
 			$result_productByCategory = $this->product->productByCategory("Basse");
 			require ("View/default.php");
 		}
@@ -58,7 +58,7 @@
 		 * Affichage de la page des produits de la catégorie Haute
 		 */
 		public function Haute() {
-			$page = "Haute";
+			$page = "haute";
 			$result_productByCategory = $this->product->productByCategory("Haute");
 			require ("View/default.php");
 		}
@@ -68,7 +68,7 @@
 		 * Affichage de la page des produits de la catégorie Original
 		 */
 		public function Original() {
-			$page = "Original";
+			$page = "original";
 			$result_productByCategory = $this->product->productByCategory("Original");
 			require ("View/default.php");
 		}
@@ -78,7 +78,7 @@
 		 * Affichage de la page des produits de la catégorie Swag
 		 */
 		public function Swag() {
-			$page = "Swag";
+			$page = "swag";
 			$result_productByCategory = $this->product->productByCategory("Swag");
 			require ("View/default.php");
 		}

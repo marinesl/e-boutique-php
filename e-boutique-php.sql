@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Hôte : localhost:8889
--- Généré le : mar. 13 sep. 2022 à 13:00
+-- Généré le : mar. 13 sep. 2022 à 13:51
 -- Version du serveur : 5.7.34
 -- Version de PHP : 7.4.21
 
@@ -57,6 +57,13 @@ CREATE TABLE `e_boutique_php_order` (
   `quantity_order` int(11) NOT NULL,
   `total_order` int(11) NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=latin1;
+
+--
+-- Déchargement des données de la table `e_boutique_php_order`
+--
+
+INSERT INTO `e_boutique_php_order` (`id_order`, `date_order`, `email_user`, `id_product`, `quantity_order`, `total_order`) VALUES
+(2, '2022-09-13 15:24:29', 'tony.stark@mail.com', 3, 1, 49);
 
 -- --------------------------------------------------------
 
@@ -133,7 +140,8 @@ CREATE TABLE `e_boutique_php_user` (
 --
 
 INSERT INTO `e_boutique_php_user` (`pseudo_user`, `last_name_user`, `first_name_user`, `password_user`, `address_user`, `postal_code_user`, `city_user`, `email_user`) VALUES
-('captainA', 'Rogers', 'Steve', 'ab4f63f9ac65152575886860dde480a1', '569 Leaman Place', 0, 'Brooklyn Heights', 'steve.rogers@mail.com');
+('captainA', 'Rogers', 'Steve', 'ab4f63f9ac65152575886860dde480a1', '569 Leaman Place', 0, 'Brooklyn Heights', 'steve.rogers@mail.com'),
+('ironman2', 'Stark', 'Tony', 'ab4f63f9ac65152575886860dde480a1', 'Malibu Point 10880', 90265, 'Malibu', 'tony.stark@mail.com');
 
 --
 -- Index pour les tables déchargées
@@ -179,7 +187,7 @@ ALTER TABLE `e_boutique_php_category`
 -- AUTO_INCREMENT pour la table `e_boutique_php_order`
 --
 ALTER TABLE `e_boutique_php_order`
-  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT;
+  MODIFY `id_order` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 --
 -- AUTO_INCREMENT pour la table `e_boutique_php_product`
